@@ -1,20 +1,5 @@
-# bitinsurance
+# Bit Insurance (Cypress + GitHub Actions)
 Bit Insurance assignment 
-
-## Installation :
-
-1. Download this project and type below commands in the terminal: 
-	```bash
-	npm install
-	```
-2. How to run the bundled tests from CLI:
-	```bash
-	npm run cy:scripts
-	```
-3. How to run the bundled tests from Cypress Test Runner:
-	```bash
-	npm run cy:open
-	```
 	
 # In a nutshell
 Cypress is a next generation front end testing tool built for the modern web. It addresses the key pain points that the developers and QA engineers face when testing modern applications.
@@ -25,6 +10,20 @@ This enables you to write faster, easier and more reliable tests.
 Cypress consists of a free, open source, locally installed Test Runner and a Dashboard Service for recording your tests. It also provides 3rd party integrations to various plugins and tools.
 Cypress helps you set up and start writing tests every day while you build your application locally. Both BDD(Behavioral Driven Developement) and TDD(Test Driven Development) can be accomplished.
 After building up a suite of tests and integrating Cypress with CI Provider which in our case is GitHub Actions, but Cypress Dashboard Service can even then record our test runs.
+
+## Installation :
+1. Download this project from github repoistory and type below commands in the terminal: 
+	```bash
+	npm install
+	```
+2. How to run the bundled tests from CLI:
+	```bash
+	npm run cy:run
+	```
+3. How to run the bundled tests from Cypress Test Runner:
+	```bash
+	npm run cy:open
+	```
 
 ## Steps to contribute to this framework:
 1. Clone this repository from GitHub into your local desktop.
@@ -43,11 +42,11 @@ After building up a suite of tests and integrating Cypress with CI Provider whic
 5. Create a pull request and assign to your reviewer.
 
 ## How to write tests and How to organize the tests.
-Current Cypress framework is structured in four layer. Design of current framework is comprised of -
+Current Cypress framework is structured in three layer. Design of current framework is comprised of -
 
-1. End to End test - All test are written in cypress/integration/e2espec folder. Test cases are divided into two folder structure api and functional(ui). Under this based on functionality the spec file is created with functionality name. All test file should have *.spec.js filename in the end.
-2. Page Actions - All repeatable action are written in this folder. Again we have divided the folder structure in two parts api action and web action. Based on the functionality again we have divided in different file.
-3. Locator - CSS locator elements are stored here. Again based on the functionality we have filename of the locators. It is in JSON format.
+1. End to End test - All test are written in e2e folder. All test file should have *.cy.js filename in the end.
+2. Support - All repeatable actions are written in this folder. Based on the functionality again we have divided in different file.
+3. locator.json - CSS locator elements are stored here. It is in JSON format.
 
 
 ## Reports
