@@ -1,0 +1,19 @@
+{
+    "video" : ".slick-current > video",
+    "searchButton" : "div.component--header__search >button",
+    "searchBox" : "input[type='search']",
+    "searchButtonActive" : "div.component--header__search.active >button",
+    "searchUrl" : "/search?k=IFRS+17",
+    "searchlist" : ".list-block",
+    "searchResultHeader" : ".list-block >div >h2",
+    "searchResultLink" : ".list-block >div > a",
+    "searchResultDesc" : ".list-block >div > p",
+    "resultcount" : 3,
+    "megaMenu" : "button[data-trigger='mega-menu']",
+    "menu" : "div.component.component--mega-menu.visible.active",
+    "contactUsMenu": "div.secondary>div.item>a.ajax-link[href='/contact']",
+    "city" : "#bermudaoffice> div > div.component--content > div >div >div > p",
+    "address" : "#bermudaoffice> div > div.component--content > div >div >div > address",
+    "phone" : "#bermudaoffice> div > div.component--content > div >div >div > .location__contacts >a"
+}
+  

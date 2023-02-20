@@ -1,0 +1,29 @@
+{
+  "name": "bitinsurance",
+  "version": "1.0.0",
+  "description": "Bit insurance assignement",
+  "main": "index.js",
+  "scripts": {
+    "open": "npx cypress open",
+    "cy:run": "cypress run --reporter cypress-mochawesome-reporter",
+    "cy:clean-reports": "if exist cypress\\reports rmdir /s/q cypress\\reports",
+    "cy:clean-snapshots": "if exist cypress\\screenshots rmdir /s/q cypress\\screenshots",
+    "cy:clean-videos": "if exist cypress\\videos rmdir /s/q cypress\\videos",
+    "cy:pretest": "npm run cy:clean-reports && npm run cy:clean-snapshots && npm run cy:clean-videos",
+    "cy:scripts": "npm run cy:pretest && npm run cy:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Assault1/bitinsurance.git"
+  },
+  "author": "Ankit Srivastava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Assault1/bitinsurance/issues"
+  },
+  "homepage": "https://github.com/Assault1/bitinsurance#readme",
+  "devDependencies": {
+    "cypress": "^12.6.0",
+    "cypress-mochawesome-reporter": "^3.3.0"
+  }
+}
