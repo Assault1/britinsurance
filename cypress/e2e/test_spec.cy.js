@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 const locators = require("../support/locator.json");
-const testdata = require("../fixtures/example.json");
+const validation = require("../support/validation.json");
 
 const url = Cypress.env('base_url')
 const view = Cypress.config('viewport')
@@ -27,36 +27,35 @@ describe('Brit Insurance Webpage Automation', () => {
     page.getWebElement(locators.searchlist).should('have.length',locators.resultcount)
     page.getWebElement(locators.searchResultHeader).should(($lis) => {
       expect($lis).to.have.length(locators.resultcount)
-      expect($lis.eq(0)).to.contain('News')
-      expect($lis.eq(1)).to.contain('Culture')
-      expect($lis.eq(2)).to.contain('Culture')
+      expect($lis.eq(0)).to.contain(validation.resultheader1)
+      expect($lis.eq(1)).to.contain(validation.resultheader2)
+      expect($lis.eq(2)).to.contain(validation.resultheader3)
     })
     page.getWebElement(locators.searchResultLink).should(($lis) => {
       expect($lis).to.have.length(locators.resultcount)
-      expect($lis.eq(0)).to.have.contain('Interim results for the six months ended 30 June 2022')
-      expect($lis.eq(1)).to.have.contain('Gavin Wilkinson')
-      expect($lis.eq(2)).to.have.contain('John King')
+      expect($lis.eq(0)).to.have.contain(validation.resultsearchlink1)
+      expect($lis.eq(1)).to.have.contain(validation.resultsearchlink2)
+      expect($lis.eq(2)).to.have.contain(validation.resultsearchlink3)
     })
     page.getWebElement(locators.searchResultDesc).should(($lis) => {
       expect($lis).to.have.length(locators.resultcount)
-      expect($lis.eq(0)).to.have.contain('A strong underwriting performance and significant growth.')
-      expect($lis.eq(1)).to.have.contain('Group Chief Financial Officer')
-      expect($lis.eq(2)).to.have.contain('Group Executive Underwriter') 
+      expect($lis.eq(0)).to.have.contain(validation.resultdesc1)
+      expect($lis.eq(1)).to.have.contain(validation.resultdesc2)
+      expect($lis.eq(2)).to.have.contain(validation.resultdesc3) 
     })
   })
 
-  it('Verify search result shows three results', () => {
+  it('Verify contact us page have bermuda office address', () => {
     page.title().should('eq', 'Brit Insurance')
     page.getWebElement(locators.video).should('be.visible')
     page.getWebElement(locators.megaMenu).click()
     page.getWebElement(locators.menu).should('be.visible')
     page.getWebElement(locators.contactUsMenu).scrollIntoView().should('be.visible').click()
-    cy.url().should('include', '/contact')
-    page.getWebElement(locators.city).contains('Pembroke')
-    page.getWebElement(locators.address).contains('Ground Floor, Chesney House')
-    page.getWebElement(locators.address).contains('The Waterfront, 96 Pitts Bay Road, ')
-    page.getWebElement(locators.address).contains('Pembroke, Hamilton HM 08, Bermuda')
-    page.getWebElement(locators.phone).should('have.attr', 'href').and('contain', '+1 441 278 0660')
-    
+    cy.url().should('include', locators.contactUrl)
+    page.getWebElement(locators.city).contains(validation.city)
+    page.getWebElement(locators.address).contains(validation.address1)
+    page.getWebElement(locators.address).contains(validation.address2)
+    page.getWebElement(locators.address).contains(validation.address3)
+    page.getWebElement(locators.phone).should('have.attr', 'href').and('contain', validation.phone)
   })
 })

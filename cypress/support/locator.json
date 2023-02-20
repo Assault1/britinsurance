@@ -4,6 +4,7 @@
     "searchBox" : "input[type='search']",
     "searchButtonActive" : "div.component--header__search.active >button",
     "searchUrl" : "/search?k=IFRS+17",
+    "contactUrl" : "/contact",
     "searchlist" : ".list-block",
     "searchResultHeader" : ".list-block >div >h2",
     "searchResultLink" : ".list-block >div > a",
