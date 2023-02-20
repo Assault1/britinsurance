@@ -11,6 +11,32 @@ Cypress consists of a free, open source, locally installed Test Runner and a Das
 Cypress helps you set up and start writing tests every day while you build your application locally. Both BDD(Behavioral Driven Developement) and TDD(Test Driven Development) can be accomplished.
 After building up a suite of tests and integrating Cypress with CI Provider which in our case is GitHub Actions, but Cypress Dashboard Service can even then record our test runs.
 
+## Requirements
+
+To execute and develop, you will only need Node.js and node package manager installed in your environement.
+
+### Node
+- #### Node installation on Windows
+
+  Just go on [official Node.js website](https://nodejs.org/) and download the installer.
+Also, be sure to have `git` available in your PATH, `npm` might need it (You can find git [here](https://git-scm.com/)).
+
+- #### Node installation on Ubuntu
+
+  You can install nodejs and npm easily with apt install, just run the following commands.
+
+      $ sudo apt install nodejs
+      $ sudo apt install npm
+
+- #### Other Operating Systems
+  You can find more information about the installation on the [official Node.js website](https://nodejs.org/) and the [official NPM website](https://npmjs.org/).
+
+If the installation was successful, you should be able to run the following command.
+
+    $ node --version
+    
+    $ npm --version
+
 ## Installation :
 1. Download this project from github repoistory and type below commands in the terminal: 
 	```bash
@@ -42,12 +68,12 @@ After building up a suite of tests and integrating Cypress with CI Provider whic
 5. Create a pull request and assign to your reviewer.
 
 ## How to write tests and How to organize the tests.
-Current Cypress framework is structured in three layer. Design of current framework is comprised of -
+Design of current framework is comprised of -
 
 1. End to End test - All test are written in e2e folder. All test file should have *.cy.js filename in the end.
-2. Support - All repeatable actions are written in this folder. Based on the functionality again we have divided in different file.
-3. locator.json - CSS locator elements are stored here. It is in JSON format.
-
+2. Support - All repeatable actions and supportive file are written in this folder. Based on the functionality again we have divided in different file. ie. - locator and validation 
+   a) locator.json - CSS locator elements are stored here. It is in JSON format.
+   b) validation.json - All validation message are stored in json format.
 
 ## Reports
 
