@@ -1,2 +1,2 @@
-# bitinsurance
+# Bitinsurance
 Bit Insurance assignment
