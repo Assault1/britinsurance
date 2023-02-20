@@ -74,6 +74,7 @@ Design of current framework is comprised of -
 2. Support - All repeatable actions and supportive file are written in this folder. Based on the functionality again we have divided in different file. ie. - locator and validation 
   
    a) locator.json - CSS locator elements are stored here. It is in JSON format.
+   
    b) validation.json - All validation message are stored in json format.
 
 ## Reports
