@@ -2,7 +2,7 @@
 Bit Insurance assignment 
 	
 # In a nutshell
-Two test cases are automated in this setup. Both the test cases are automated using Cypress tool and javascript as language. By default, cypress execute test cases in Electron browser in headless mode. I have provided scripts to run the test cases in chrome browser in headless mode.
+Two test cases are automated in this setup. Both the test cases are automated using Cypress tool and Javascript as language. By default, cypress execute test cases in electron browser in headless mode. I have provided scripts to run the test cases in chrome browser also.
 
 Report and video of latest test cases execution is stored in reports & videos folder repectively.
 
@@ -47,9 +47,11 @@ If the installation was successful, you should be able to run the following comm
 	npm run cy:run
 	```
 3. How to run the bundled tests in chrome browser from CLI:
-        ```bash
+        
+	```bash
 	npm run cy:chrome
 	```
+	
 4. How to run the bundled tests from Cypress Test Runner:
 	```bash
 	npm run cy:open
