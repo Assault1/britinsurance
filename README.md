@@ -2,9 +2,9 @@
 Bit Insurance assignment 
 	
 # In a nutshell
-Cypress is a next generation front end testing tool built for the modern web. It addresses the key pain points that the developers and QA engineers face when testing modern applications.
-Cypress is most often compared to Selenium; however Cypress is both fundamentally and architecturally different. Cypress is not constrained by the same restrictions as Selenium.
-This enables you to write faster, easier and more reliable tests.
+Two test cases are automated in this setup. Both the test cases are automated using Cypress tool and javascript as language. By default, cypress execute test cases in Electron browser in headless mode. I have provided scripts to run the test cases in chrome browser in headless mode.
+
+Report and video of latest test cases execution is stored in reports & videos folder repectively.
 
 ## Cypress ecosystem
 Cypress consists of a free, open source, locally installed Test Runner and a Dashboard Service for recording your tests. It also provides 3rd party integrations to various plugins and tools.
@@ -13,7 +13,7 @@ After building up a suite of tests and integrating Cypress with CI Provider whic
 
 ## Requirements
 
-To execute and develop, you will only need Node.js and node package manager installed in your environement.
+To execute and develop, you will need Node.js and node package manager installed in your environement.
 
 ### Node
 - #### Node installation on Windows
@@ -46,7 +46,11 @@ If the installation was successful, you should be able to run the following comm
 	```bash
 	npm run cy:run
 	```
-3. How to run the bundled tests from Cypress Test Runner:
+3. How to run the bundled tests in chrome browser from CLI:
+        ```bash
+	npm run cy:chrome
+	```
+4. How to run the bundled tests from Cypress Test Runner:
 	```bash
 	npm run cy:open
 	```
