@@ -4,7 +4,7 @@
   "description": "Bit insurance assignement",
   "main": "index.js",
   "scripts": {
-    "open": "npx cypress open",
+    "cy:open": "cypress open",
     "cy:run": "cypress run --reporter cypress-mochawesome-reporter",
     "cy:clean-reports": "if exist cypress\\reports rmdir /s/q cypress\\reports",
     "cy:clean-snapshots": "if exist cypress\\screenshots rmdir /s/q cypress\\screenshots",
