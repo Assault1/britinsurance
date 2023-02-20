@@ -18,7 +18,7 @@ After building up a suite of tests and integrating Cypress with CI Provider whic
 	```
 2. How to run the bundled tests from CLI:
 	```bash
-	npm run cy:scripts
+	npm run cy:run
 	```
 3. How to run the bundled tests from Cypress Test Runner:
 	```bash
