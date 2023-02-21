@@ -15,11 +15,11 @@ describe('Brit Insurance Webpage Automation', () => {
   beforeEach(() => {
     cy.viewport(view.viewportWidth, view.viewportHeight)
     cy.visit(url)
+    page.title().should('eq', 'Brit Insurance')
+    page.getWebElement(locators.video).should('be.visible')
   }); 
 
   it('Verify search result shows three results', () => {
-    page.title().should('eq', 'Brit Insurance')
-    page.getWebElement(locators.video).should('be.visible')
     page.getWebElement(locators.searchButton).should('be.visible').click()
     page.getWebElement(locators.searchBox).type("IFRS 17")
     page.getWebElement(locators.searchButtonActive).should('be.visible').click()
@@ -46,8 +46,6 @@ describe('Brit Insurance Webpage Automation', () => {
   })
 
   it('Verify contact us page have bermuda office address', () => {
-    page.title().should('eq', 'Brit Insurance')
-    page.getWebElement(locators.video).should('be.visible')
     page.getWebElement(locators.megaMenu).click()
     page.getWebElement(locators.menu).should('be.visible')
     page.getWebElement(locators.contactUsMenu).scrollIntoView().should('be.visible').click()
