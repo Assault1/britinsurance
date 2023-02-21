@@ -73,7 +73,7 @@ If the installation was successful, you should be able to run the following comm
 	```
 5. Create a pull request and assign to your reviewer.
 
-## How to write tests and How to organize the tests.
+## How to write and organize the tests.
 Design of current framework is comprised of -
 
 1. End to End test - All test are written in e2e folder. All test file should have *.cy.js filename in the end.
