@@ -1,5 +1,5 @@
-# Bit Insurance (Cypress + GitHub Actions)
-Bit Insurance assignment 
+# Brit Insurance (Cypress + GitHub Actions)
+Brit Insurance assignment 
 	
 # In a nutshell
 Two test cases are automated in this setup. Both the test cases are automated using Cypress tool and Javascript as language. By default, cypress execute test cases in electron browser in headless mode. I have provided scripts to run the test cases in chrome browser also.
